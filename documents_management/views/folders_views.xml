@@ -38,7 +38,7 @@
                             <group>
                                 <field name="model_id"/>
                                 <field name="parent_folder_id" domain="[('id', '!=', id)]"/>
-                                <field name="allowed_users" widget="many2many_tags" options="{'no_create': True}"/>
+                                <field name="allowed_users" widget="many2many_avatar_user" options="{'no_create': True}"/>
                                 
                             </group>
                             <group>

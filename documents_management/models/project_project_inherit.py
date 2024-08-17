@@ -3,7 +3,8 @@ from odoo import models, fields, api
 class ProjectProject(models.Model):
     _inherit = 'project.project'
 
-    custom_field = fields.Char(string="Custom Field")
+    #custom_field = fields.Char(string="Custom Field")
+    allowed_users_from_project = fields.Many2many('res.users',string='Acceso permitido a',default=lambda self: self.env.user)
 
     @api.model
     def create(self, vals):
