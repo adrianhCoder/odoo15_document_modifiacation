@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="custom_project_form_view" model="ir.ui.view">
+    <field name="name">Mine project</field>
+    <field name="model">project.project</field>
+    <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+    <field name="arch" type="xml">
+        <xpath expr="//group/field[@name='name']" position="after">
+           <field name="custom_field" placeholder="e.g. Custom Dataaa"/>
+        </xpath>
+    </field>
+</record>
+
+</odoo>
