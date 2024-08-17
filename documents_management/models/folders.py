@@ -9,6 +9,7 @@ class DocumentFolder(models.Model):
     _rec_name = 'complete_name'
     
     name = fields.Char(string='Name', required=True )
+    allowed_users = allowed_users = fields.Many2many('res.users',string='Acceso permitido a',default=lambda self: self.env.user)
     complete_name = fields.Char('Complete Name', compute='_compute_complete_name', recursive=True, store=True) 
     sequence = fields.Integer('Sequence', default=10)   
     company_id = fields.Many2one('res.company', string='Company', index=True, default=lambda self: self.env.company)
